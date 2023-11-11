@@ -1,0 +1,48 @@
+:root{
+    --bgcolor: #353A40;
+    --textcolor: white;
+    --bgbtn: #29A744;
+           
+
+}
+
+*{
+    padding-top: 70;
+    margin: 20;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: var(--bgcolor);
+    height: 4.2em;
+    color: var(--textcolor);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    .logo {
+        display: inline-block;
+        margin-left: 2em;
+        & img{
+            height: 4em;
+            vertical-align: middle;
+        }
+        & h2{
+            display: inline-block;
+        }
+    }
+    & nav{
+        float: right ;
+        padding: 1em;
+        & a {
+        text-decoration: none;
+        color: var(--textcolor);
+        margin: 0 1em;
+        }
+        .ticket{
+            color:var(--bgbtn);
+                }
+    }
+
+}
