@@ -1,0 +1,197 @@
+:root{
+    --bgcolor: #353A40;
+    --textcolor: white;
+    --bgbtn: #29A744;
+           
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: var(--bgcolor);
+    height: 4.2em;
+    color: var(--textcolor);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    .logo {
+        display: inline-block;
+        margin-left: 2em;
+        & img{
+            height: 4em;
+            vertical-align: middle;
+        }
+        & h2{
+            display: inline-block;
+        }
+    }
+    & nav{
+        float: right ;
+        padding: 1em;
+        & a {
+        text-decoration: none;
+        color: var(--textcolor);
+        margin: 0 1em;
+        }
+        .ticket{
+            color:var(--bgbtn);
+                }
+    }
+
+}
+
+main{
+    .principal{
+        position: relative;
+        & img {
+            filter:brightness(0.5);
+        }
+        .content-principal{
+            position: absolute;
+            top: 50vh;
+            color: var(--textcolor);
+            text-align: right;
+            right: 4em;
+            width: 40%;
+            line-height: 2em;
+
+            & p {
+                margin: 1.5em 0;
+            }
+            & a {
+                border: 1 px solid var(--textcolor);
+                border-radius: 5px ;
+                text-decoration: none;
+                color: var(--textcolor);
+                padding: 15 px 20px;
+                margin: 0 1em;
+
+            }
+            .btn-color{
+                text-wrap:nowrap;
+                background-color: var(--bgbtn);
+                border: 1px solid var(--bgbtn);
+            }
+        }
+    }
+
+}
+
+.grid-content{
+    display: grid;
+    grid-template-areas: "orador orador " "paisaje descrip" "formulario formulario";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    
+    }
+
+.title{
+        text-align: center;
+        margin: 50px;
+    }
+
+    .item-1{
+        grid-area: orador;
+        .content-card{
+            display:flex;
+            flex-flow: row wrap;
+            justify-content:space-evenly;
+            & div[class^="card"]{
+                width: 250px;
+                & img{
+                    width: 100%;
+                    padding-top: 0.5em;
+                    padding-bottom: 1.5em;
+                }
+
+            }
+        }
+        
+
+    }
+    .item-2{
+        grid-area: paisaje ;
+        margin-top: 1.5em;
+        background-color: var(--bgcolor);
+        & img{
+            width: 50%;
+            height: 50%;
+        }
+
+    }
+
+
+    .item-3{
+        grid-area: descrip;
+        background-color: var(--bgcolor);
+        margin-bottom: 1.5rem;
+        margin:  0.5rem ;
+        color: var(--textcolor); 
+        float:right;
+         
+        & a {
+            border: 1 px solid var(--textcolor);
+            border-radius: 5px ;
+            text-decoration: none;
+            color: var(--bgbtn);
+            padding: 15 px 20px;
+            margin: 0 1em;
+            }
+        }
+    
+
+
+    
+
+
+    .item-4{
+        grid-area: formulario;
+        .form{
+            padding: 0 20vw;
+            padding-bottom: 1em;
+            margin: 0 auto;
+            position: relative;
+                .titulo {
+            
+                display: flex;
+                flex-direction: column;
+                flex-flow: row wrap;
+                margin: 2px 2px;
+            
+                & p, h4 {
+                    text-align: center;
+                    padding: 0.5px 0.5px;
+    
+          
+            }
+            .enviar{
+                width: 51%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                text-align: center;
+                background-color: var(--bgbotton);
+                color: var(--textcolor);
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+
+footer {
+    padding: 2em 0;
+    background-color: var(--bgcolor);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    }
+
+   
